@@ -1,0 +1,372 @@
+/* ! Base Styles */
+
+body{font-family: "TT Lakes Regular", sans-serif; font-size: 16px;}
+a{text-decoration: none;}
+
+p{line-height: 28px; color: #666; font-weight: 300;}
+
+.menu-text{font-family: "Teko", sans-serif; font-size: 25px; text-transform: uppercase; color: #fff;}
+.menu-subtext{font-family: "TT Lakes Regular", sans-serif; font-size: 20px; color: #fff; font-weight: 0;}
+.big-text{font-size: 70px; font-weight: 900;}
+.med-text{font-size: 40px;}
+.sublogo-text{font-size: 25px;}
+.normal-text{font-size: 20px;}
+.small-text{font-size: 14px;}
+.intro-text{text-transform: uppercase; font-size: 20px; font-weight: bold;}
+.button-text{text-transform: uppercase; font-size: 20px;}
+.button-text:hover{background: #b83d3d;}
+
+
+.button{width: 230px; padding: 18px 20px; background-color: #da292a; color: #fff; display: inline-block; border-radius: 4px; text-align: center;}
+
+
+
+@media (max-width: 1100px) {
+  .big-text{font-size: 40px; font-weight: 900;}
+}
+
+.menu-panel{display: none;}
+.menu-panel__logo{display: none;}
+.menu-panel .subtext{display: none;}
+
+/* ! Header */
+
+.header{
+  z-index: 10;
+  margin: 0;
+  width: 100%;
+  background-color: #000;
+  position: fixed; /*Posizionamento che mi lascia la cosa fissa dov'è anche dopo che scorro*/
+  top: 0;
+  padding: 20px 15px;
+  display: flex;
+}
+
+.logo-menu{
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  padding: 5px 10px 5px 10px;
+}
+.logo-menu:hover{background: #111111;}
+
+.logo-menu img{height: 55px;}
+.logo-menu a{height: 55px;}
+
+.menu{width: 100%; z-index: 0;padding: 0 10px;}
+.menu li{display: inline-block;}
+.menu li a{display: block; padding: 15px 8px; position: relative;}
+.menu a img{height: 15px;}
+.menu li a:hover{color: #da292a;}
+
+.hamburger{display: none;}
+
+/* ! Media-query */
+@media (max-width: 1100px) {
+
+  .cta{display: none;}
+
+  .header{
+    z-index: 10;
+    margin: 0;
+    width: 100%;
+    background-color: #000;
+    position: fixed; /*Posizionamento che mi lascia la cosa fissa dov'è anche dopo che scorro*/
+    top: 0;
+    padding: 20px 15px;
+    display: flex;
+  }
+  
+  
+  .menu-panel__logo{
+    z-index: 1;
+    display: flex;
+    padding: 35px 0;
+    width: 100%;
+  }
+  
+  .menu-panel__logo img{width: 30vw; max-width: 190px; margin-left: 50px;}
+  
+  .menu{display: none;}
+
+  .menu-panel{
+    display: block;
+    z-index: 20;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    box-shadow: 0 5px 20px rgba(0,0,0,.05);
+    width: 300px;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: all 1s cubic-bezier(.215, .61, .355, 1);
+  }
+  
+  .menu-panel ul {padding: 15px 30px;}
+
+  .menu-panel--open{
+    transform: translateX(0%);
+  }
+  
+  .menu-text{font-size: 30px; padding: 10px;}
+  .subtext{padding: 0 15px;}
+  .subtext li a img{width: 15px;}
+  .menu-subtext{font-size: 100px; padding: 8px 0 ;}
+
+
+  .hamburger{
+    display: block;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 40px;
+    right: 30px;
+  }
+
+  .hamburger span{
+    background: white;
+    height: 3px;
+    width: 100%;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+}
+
+
+/* ! Tendina */
+.tendina{
+  position: relative;
+}
+
+.tendina-info{
+  position: absolute;
+  padding-top: 20px;
+  max-height: 0px; 
+  width: auto;
+  display: grid;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  border-radius: 7px;
+}
+
+.tendina ul a{
+  padding: 15px 20px;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  background: linear-gradient(0deg, rgba(0,0,0,.9), rgba(0,0,0,0.9));
+}
+
+.tendina a ul a{display: none;}
+
+/* Gestione hover tendina */
+.tendina:hover .tendina-info{max-height: 300px;transition: all 0.4s ease;}
+.tendina a:hover{color: #da292a;}
+.tendina:hover .freccetta{transform: rotate(180deg);}
+.tendina-info a:hover ul a{height: 50px; display: block;}
+.tendina-info a:hover{color: #da292a;}
+
+
+/* ! Background video principale */
+.cover{
+  border-top: 0;
+  position: relative;
+  border-bottom: 0px; 
+  overflow: hidden;
+}
+
+.cover__logo{
+  z-index: 2;
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 30%;
+}
+
+
+.cover:after{
+  content: ' ';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  bottom: 0; left: 0;
+  background: #000;
+  opacity: .5;
+}
+
+.video-class{
+  z-index: 0;
+  padding: 105px 0 0 0;
+  min-width: 100%;
+  height: auto;
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+.cover__content{
+  z-index: 2;
+  position: absolute;
+  bottom: 28%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+}
+
+.divisorio{background-color: #000; height: 50px; width: 100%; display: block;}
+
+.sfondo{
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-image: url("../Foto/Foto main/D2HMDFAWoAERJ98.jpg_large");
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+
+}
+
+.tito{
+  font-family: "Teko", sans-serif;; 
+  font-style: italic;
+  color: #fff;
+  /* text-transform: uppercase; */
+  font-size: 9vw;
+  text-align: center;
+  margin: 110px 0 0px 0;
+} 
+.container-photo{
+  display: flex;
+  flex-direction: column;
+  margin: 0 30px;
+
+}
+
+.photo{
+  width: 90%;
+  padding: 40px;
+  margin: 0 5%;
+}
+
+@media (min-width: 650px) and ( max-width: 1100px) {
+  .video-class{position: relative;}
+  
+  .cover__logo{
+    height: 40%;
+  }
+
+  .cover__content{
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .sublogo-text{font-size: 150%;}
+}
+
+@media (max-width: 700px) {
+  .cover__logo{
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 40%;
+  }
+  .cover__content{display: none;}
+}
+
+
+/* ! Pulsante TornaSu*/
+#torna-su {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  /* color: white; */
+  /* padding: 10px 20px; */
+  border-radius: 20px;
+  /* cursor: pointer; */
+  /* transition: opacity 0.3s;   */
+  background: none;
+  z-index: 10;
+}
+
+
+
+#torna-su img{height: 40px; rotate: 180deg;}
+
+#torna-su:hover {
+  background-color: #555;
+}
+
+/* ! Grid*/
+
+.grid{display: flex; padding: 0 30px; margin: 0 ;}
+.grid .col{width: 100%; padding: 30px;}
+.grid .col h4{font-weight: 600; padding: 10px 0;}
+
+@media (max-width: 1100px) {
+  .grid {flex-wrap: wrap; width: 100%;}
+  .grid .col h4{font-size: 20px; text-align: center;}
+  .grid .col p{font-size: 15px; text-align: center;}
+}
+
+
+/* ! Footer*/
+.footer{
+  background: #000;
+  margin: 0;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ! Helpers */
+/* classe che viene utilizzata come jolly in varie parti del design che ti da un attributo semplice */
+
+.mt-1{margin-top: 50px;}
+.mt-2{margin-top: 100px;}
+.mt-3{margin-top: 150px;}
+.tw{color:#fff}
+
+
+
+/* Va a resettare il padding degli elementi applicando il padding degli elementi all'interno degli elementi
+e non all'esterno, per evitare sovrapposizioni */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}

@@ -1,0 +1,116 @@
+
+/* ! Styles */
+/* fare stili in percentuale e mediaquery */
+
+.logo-text{
+  font-family: "Teko", sans-serif;
+  font-size: 6vw;
+  color: #fff;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.logo-subtext{
+  font-size: 2vw;
+  text-align: center;
+  color: #fff;
+}
+
+.card-title{color: #fff; font-weight: 800; font-size: 4vw;}
+.card-text{color: #fff; font-size: 2vw; padding: 10px 20px; box-sizing: border-box;}
+
+
+
+
+/* ! Coverbr */
+.coverbr{
+  position: relative;
+  overflow: hidden;
+  border: 0;
+}
+
+.coverbr img{
+  width: 100%;
+}
+
+.coverbr__logo{
+  z-index: 2;
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  height: 30%;
+}
+
+
+.coverbr:after{
+  content: ' ';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  bottom: 0; left: 0;
+  background: #000;
+  opacity: .6;
+}
+
+.coverbr__content{
+  z-index: 2;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+}
+
+.divisorio{background: #000; height: 50px; width: 100%; display: block;}
+
+.sfondo-br{
+  padding: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-image: url("../Foto/Foto main/sfondo\ br2.jpg_large"); /* Aggiunge lo sfondo */
+  background-attachment: fixed; /* Lo rende fisso */
+  background-size: cover; /* Adatta lo sfondo alla finestra del browser */
+  min-height: 100vh; /* Impedisce che le card superino l'altezza della finestra */
+}
+
+.brcard{
+  background-color: #111111;
+  border-radius: 20px;
+  width: 100%;
+  margin-bottom: 50px;
+  overflow: hidden;
+  position: relative;
+}
+
+.brcard__container{width: 90%;}
+
+.brcard__container img{float: left; width: 50%; height: 40%; position: relative;}
+
+.brcard__container2{
+  position: relative;
+  top: 0;
+  left: 75%;
+  transform: translateX(-50%);
+  width: 50%; 
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.brcard__content{padding: 20px; position: relative;}
+.brcard__content h2{padding-bottom: 20px;}
+
+@media (max-width: 768px) {
+  .brcard__container2{
+    flex-direction: column;
+    left: 50%;
+  }
+  .brcard__container img{width: 100%;}
+  .logo-text{left: 50%; bottom: 0%;}
+  .logo-subtext{left: 50% ;bottom: 0%;}
+}
