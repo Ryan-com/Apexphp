@@ -46,32 +46,74 @@
     <div class="divisorio"></div>
 
     <div class="legends-background">
+
+    <form class="search-container" method="post" >
+        <input type="text" id="input-ricerca" name="input-ricerca" class="search-input" placeholder="Cerca una leggenda...">
+        <input type="submit" value="Cerca">
+        <div id="results" class="results"></div>
+    </form>
+
         <div class="banners">
             <?php 
                 require("../data/connessione.php");
-                
-                $sql = "SELECT nome_leggenda, banner, professione
-                        FROM leggende";
-                
-                $ris = $conn->query($sql) or die("Query fallita!");
-                
-                foreach($ris as $riga){
-                    $nome_leggenda = $riga["nome_leggenda"];
-                    $banner = $riga["banner"];
-                    $professione = $riga["professione"];
 
-                    echo <<<EOD
-                        <a href="personaggio.php?nome_leggenda='$nome_leggenda'">
-                            <div class="banner">
-                                <img class="banner__img"  src="../Foto/legends-banner/$banner" alt="$banner">
-                                <div class="banner__copy">
-                                    <h3>$nome_leggenda</h3>
-                                    <p>$professione</p>
+                
+
+                //Si deve sistemare per bene questa cosa della ricerca, magari provando a farla con php + ajax che mi permette di fare la ricerca in tempo reale.
+                // Le cosa che si bisogna sistemare e' principalmente lo stile della carta singola quando faccio la ricerca 
+                if(isset($_POST["input-ricerca"])){
+                    $nome = $_POST["input-ricerca"];
+                    $sql = "SELECT nome_leggenda, banner, professione
+                            FROM leggende
+                            WHERE nome_leggenda LIKE '%$nome%'";
+                    
+                    $ris = $conn->query($sql) or die("Query fallita!");
+                    
+                    foreach($ris as $riga){
+                        $nome_leggenda = $riga["nome_leggenda"];
+                        $banner = $riga["banner"];
+                        $professione = $riga["professione"];
+    
+                        echo <<<EOD
+                            
+                            <a href="personaggio.php?nome_leggenda=$nome_leggenda">
+                                <div class="banner">
+                                    <img class="banner__img"  src="../Foto/legends-banner/$banner" alt="$banner">
+                                    <div class="banner__copy">
+                                        <h3>$nome_leggenda</h3>
+                                        <p>$professione</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                    EOD;
+                            </a>
+                        EOD;
+                    }
+                } else{
+                    $sql = "SELECT nome_leggenda, banner, professione
+                            FROM leggende";
+                    
+                    $ris = $conn->query($sql) or die("Query fallita!");
+                    
+                    foreach($ris as $riga){
+                        $nome_leggenda = $riga["nome_leggenda"];
+                        $banner = $riga["banner"];
+                        $professione = $riga["professione"];
+    
+                        echo <<<EOD
+                            <a href="personaggio.php?nome_leggenda=$nome_leggenda">
+                                <div class="banner">
+                                    <img class="banner__img"  src="../Foto/legends-banner/$banner" alt="$banner">
+                                    <div class="banner__copy">
+                                        <h3>$nome_leggenda</h3>
+                                        <p>$professione</p>
+                                    </div>
+                                </div>
+                            </a>
+                        EOD;
+                    }
                 }
+
+
+                
             ?>
         </div>
     </div>

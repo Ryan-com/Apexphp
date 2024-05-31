@@ -7,7 +7,7 @@
             <li class="tendina"><a href=""  class="menu-text"> Informazioni <img src="../Foto/Icons/white-down-arrow.png" alt="" class="freccetta"></a>
                 <ul class="tendina-info">
                     <a href="https://www.ea.com/it-it/games/apex-legends" class="menu-subtext">Apex Legends</a>
-                    <a href="../Pagine/leggende.html" class="menu-subtext">Leggende</a>
+                    <a href="leggende.php" class="menu-subtext">Leggende</a>
                 </ul>
             </li>
             
@@ -17,7 +17,7 @@
                 </ul>
             </li>
             
-            <li><a href="../Pagine/mappe.html" class="menu-text">Mappe</a> </li>
+            <li><a href="mappe.php" class="menu-text">Mappe</a> </li>
             <li> <a href="https://answers.ea.com/t5/Apex-Legends/ct-p/apex-legends-it?profile.language=it"  class="menu-text"> Community </a> </li>
 
         </ul>
