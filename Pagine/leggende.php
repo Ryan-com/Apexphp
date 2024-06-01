@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apex Legends</title>
 
-    <!-- Aggiungere solo questo alle pagine -->
+    
     <link rel="shortcut icon" href="../Foto/Icons/Apex logo.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -52,42 +52,46 @@
         <input type="submit" value="Cerca">
         <div id="results" class="results"></div>
     </form>
+    
+    <?php 
+        require("../data/connessione.php");
+        //Si deve sistemare per bene questa cosa della ricerca, magari provando a farla con php + ajax che mi permette di fare la ricerca in tempo reale.
+        // Le cosa che si bisogna sistemare e' principalmente lo stile della carta singola quando faccio la ricerca 
+        if(isset($_POST["input-ricerca"])){
+            $nome = $_POST["input-ricerca"];
+            $sql = "SELECT nome_leggenda, banner, professione
+                    FROM leggende
+                    WHERE nome_leggenda LIKE '%$nome%'";
+            
+            $ris = $conn->query($sql) or die("Query fallita!");
+            
+            foreach($ris as $riga){
+                $nome_leggenda = $riga["nome_leggenda"];
+                $banner = $riga["banner"];
+                $professione = $riga["professione"];
+
+                echo <<<EOD
+                    
+                    <a href="personaggio.php?nome_leggenda=$nome_leggenda">
+                        <div class="banner">
+                            <img class="banner__img"  src="../Foto/legends-banner/$banner" alt="$banner">
+                            <div class="banner__copy">
+                                <h3>$nome_leggenda</h3>
+                                <p>$professione</p>
+                            </div>
+                        </div>
+                    </a>
+                EOD;
+            }
+        } else{
+            
+        }
+    ?>
 
         <div class="banners">
             <?php 
                 require("../data/connessione.php");
 
-                
-
-                //Si deve sistemare per bene questa cosa della ricerca, magari provando a farla con php + ajax che mi permette di fare la ricerca in tempo reale.
-                // Le cosa che si bisogna sistemare e' principalmente lo stile della carta singola quando faccio la ricerca 
-                if(isset($_POST["input-ricerca"])){
-                    $nome = $_POST["input-ricerca"];
-                    $sql = "SELECT nome_leggenda, banner, professione
-                            FROM leggende
-                            WHERE nome_leggenda LIKE '%$nome%'";
-                    
-                    $ris = $conn->query($sql) or die("Query fallita!");
-                    
-                    foreach($ris as $riga){
-                        $nome_leggenda = $riga["nome_leggenda"];
-                        $banner = $riga["banner"];
-                        $professione = $riga["professione"];
-    
-                        echo <<<EOD
-                            
-                            <a href="personaggio.php?nome_leggenda=$nome_leggenda">
-                                <div class="banner">
-                                    <img class="banner__img"  src="../Foto/legends-banner/$banner" alt="$banner">
-                                    <div class="banner__copy">
-                                        <h3>$nome_leggenda</h3>
-                                        <p>$professione</p>
-                                    </div>
-                                </div>
-                            </a>
-                        EOD;
-                    }
-                } else{
                     $sql = "SELECT nome_leggenda, banner, professione
                             FROM leggende";
                     
@@ -110,7 +114,7 @@
                             </a>
                         EOD;
                     }
-                }
+                
 
 
                 

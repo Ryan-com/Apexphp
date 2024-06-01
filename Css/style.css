@@ -35,7 +35,7 @@ p{line-height: 28px; color: #666; font-weight: 300;}
   z-index: 10;
   margin: 0;
   width: 100%;
-  background-color: #000;
+  background-color: #24262a;
   position: fixed; /*Posizionamento che mi lascia la cosa fissa dov'è anche dopo che scorro*/
   top: 0;
   padding: 20px 15px;
@@ -52,6 +52,16 @@ p{line-height: 28px; color: #666; font-weight: 300;}
 
 .logo-menu img{height: 55px;}
 .logo-menu a{height: 55px;}
+
+/* .user-menu{
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  padding: 5px 10px 5px 10px;
+}
+.user-menu a{height: 40px;}
+.user-menu img{height: 40px;} */
+
 
 .menu{width: 100%; z-index: 0;padding: 0 10px;}
 .menu li{display: inline-block;}
@@ -70,7 +80,7 @@ p{line-height: 28px; color: #666; font-weight: 300;}
     z-index: 10;
     margin: 0;
     width: 100%;
-    background-color: #000;
+    background-color: #ff0000;
     position: fixed; /*Posizionamento che mi lascia la cosa fissa dov'è anche dopo che scorro*/
     top: 0;
     padding: 20px 15px;
@@ -325,7 +335,50 @@ p{line-height: 28px; color: #666; font-weight: 300;}
 
 
 
+/* Carousel foto */
+.carousel {
+  display: flex;
+  overflow: hidden;
+  width: 600px;
+  margin: auto;
+  position: relative;
+}
 
+.carousel-images {
+  display: flex;
+  width: 1800px; /* 600px * 3 images */
+  transition: transform 0.5s ease;
+}
+
+.carousel-image {
+  width: 600px;
+  height: 400px;
+  flex: none;
+  cursor: pointer;
+}
+
+.carousel input {
+  display: none;
+}
+
+#image1:checked ~ .carousel-images {
+  transform: translateX(0);
+}
+
+#image2:checked ~ .carousel-images {
+  transform: translateX(-600px);
+}
+
+#image3:checked ~ .carousel-images {
+  transform: translateX(-1200px);
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+}
 
 
 
