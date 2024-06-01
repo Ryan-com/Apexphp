@@ -7,7 +7,7 @@
 
         $sql = "SELECT nome_leggenda, descrizione_txt, foto_leggenda, copertina, link_video
                 FROM leggende
-                WHERE nome_leggenda = $nome_leggenda";
+                WHERE nome_leggenda = '$nome_leggenda'";
 
         $ris = $conn->query($sql) or die("Query fallita!");
         if ($ris->num_rows == 0) {
@@ -40,6 +40,7 @@
 </head>
 
 <body class="main1">
+    <?php require("nav.php"); ?>
     <main>
         <?php 
             require("../data/connessione.php");
@@ -52,6 +53,7 @@
                     </div>
                 </div>
         
+                
                 <div class="info">
                     <img src="../Foto/Character/$foto" alt="$foto" class="character">
                     <h3 class="title">Descrizione:</h3>

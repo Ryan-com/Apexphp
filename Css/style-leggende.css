@@ -65,7 +65,7 @@ a{text-decoration: none;}
 
 
 .legends-background{
-  padding: 20px;
+  padding: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -75,7 +75,12 @@ a{text-decoration: none;}
   min-height: 100vh;
 }
 
-.divisorio{background: #000; height: 50px; width: 100%; display: block;}
+/* .divisorio{background: #000; height: 100%; width: 100%; display: block; position: relative;} */
+
+/* .divisorio{background: #000; height: 200px; width: 100%; display: block; position: relative;} */
+
+
+
 
 /* ! Gestione Banners */
 .banners{
@@ -104,6 +109,8 @@ a{text-decoration: none;}
 .banner img {width: 100%; height: auto;}
 .banner__copy h3{font-size: 2.2vw; color: #000; text-align: center; font-weight: 600; margin-top: 4px;}
 .banner__copy p{margin-top: 8px; font-size: 1.5vw;  color: #000; text-align: center; padding-bottom: 10px;}
+
+
 
 
 @media (min-width:768px) and (max-width: 1100px) {
