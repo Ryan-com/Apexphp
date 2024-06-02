@@ -17,13 +17,13 @@
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Css/style.css">
     <title>Apex-registrazione</title>
+    <?php require("include.php") ?>
 </head>
+<?php require("nav.php");?>
+
 <body>
-    <?php
-        require("nav.php");
-    ?>
+
     <div>
         <h1>Registrazione</h1>
         <p style="display:flex; text-align:center;">Immergiti subito nel modo di Apex, ma prima unisciti alla nostra squadra</p>
