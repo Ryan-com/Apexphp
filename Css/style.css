@@ -1,6 +1,6 @@
 /* ! Base Styles */
 
-body{font-family: "TT Lakes Regular", sans-serif; font-size: 16px;}
+*,body{font-family: "TT Lakes Regular", sans-serif; font-size: 16px;}
 a{text-decoration: none;}
 
 p{line-height: 28px; color: #666; font-weight: 300;}
@@ -13,7 +13,7 @@ p{line-height: 28px; color: #666; font-weight: 300;}
 .normal-text{font-size: 20px;}
 .small-text{font-size: 14px;}
 .intro-text{text-transform: uppercase; font-size: 20px; font-weight: bold;}
-.button-text{text-transform: uppercase; font-size: 20px;}
+.button-text{text-transform: uppercase; font-size: 20px; font-family: "TT Lakes Regular", sans-serif;}
 .button-text:hover{background: #b83d3d;}
 
 .cta{padding-right: 20px;}
@@ -336,6 +336,7 @@ p{line-height: 28px; color: #666; font-weight: 300;}
   background: #000;
   margin: 0;
   width: 100%;
+  font-family: "TT Lakes W05 Regular", sans-serif;
 }
 
 
@@ -384,21 +385,10 @@ button {
   padding: 10px 20px;
   font-size: 16px;
 }
-
-
-.legends-background{
-  padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  background-image: url("../Foto/Foto main/Sfondo\ leggende 2.jpg");
-  background-attachment: fixed;
-  background-size: cover;
-  min-height: 100vh;
-}
+/*  */
 
 /* ! Gestione Banners */
-.banners{
+/* .banners{
   z-index: 3;
   margin: 5px 20px;
 }
@@ -424,7 +414,7 @@ button {
 .banner img {width: 100%; height: auto;}
 .banner__copy h3{font-size: 2.2vw; color: #000; text-align: center; font-weight: 600; margin-top: 4px;}
 .banner__copy p{margin-top: 8px; font-size: 1.5vw;  color: #000; text-align: center; padding-bottom: 10px;}
-
+ */
 
 
 .divisorio{background-color: #000; height: 50px; width: 100%; display: block;}
@@ -450,7 +440,7 @@ button {
     left: 0;
     width: 80px;
     height: 80px;
-    background: crimson;
+    background: #da292a;
     border-radius: 50%;
     transition: all 1s;
     z-index: 4;
@@ -501,12 +491,12 @@ button {
     outline: none;
     border: none;
     /* border-bottom: 1px solid rgba(255, 255, 255, 0.2); */
-    background: crimson;
+    background: #da292a;
     color: white;
-    text-shadow: 0 0 10px crimson;
+    text-shadow: 0 0 10px #da292a;
     padding: 0 80px 0 20px;
     border-radius: 30px;
-    box-shadow: 0 0 25px 0 crimson,
+    box-shadow: 0 0 25px 0 #da292a
                 0 20px 25px 0 rgba(0, 0, 0, 0.2);
     /* box-shadow: inset 0 0 25px 0 rgba(0, 0, 0, 0.5); */
     transition: all 1s;

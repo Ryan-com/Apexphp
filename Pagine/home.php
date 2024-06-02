@@ -17,7 +17,7 @@
 </head>
 
 <body class="main1">
-    
+
     <?php require("nav.php"); ?>
 
     <main class="container">
@@ -32,7 +32,7 @@
             </div>
             
             <div class="cover__content">
-                <h2 class="sublogo-text tw"> Lanciati nella mischia!</h2>
+                <h2 class="sublogo-text tw"> Affronta la nuova stagione di Apex Legends™: Scintilla!</h2>
             </div>
             
             <video width="320" height="240" autoplay muted loop class="video-class">
