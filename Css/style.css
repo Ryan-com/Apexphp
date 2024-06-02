@@ -299,14 +299,14 @@ p{line-height: 28px; color: #666; font-weight: 300;}
 #torna-su {
   display: none;
   position: fixed;
-  bottom: 20px;
+  bottom: 5px;
   right: 20px;
   /* color: white; */
-  /* padding: 10px 20px; */
-  border-radius: 20px;
+  padding: 10px 10px;
+  border-radius: 40px;
   /* cursor: pointer; */
   /* transition: opacity 0.3s;   */
-  background: none;
+  background: black;
   z-index: 10;
 }
 
@@ -390,6 +390,7 @@ button {
 
 .divisorio{background-color: #000; height: 50px; width: 100%; display: block;}
 .divisorio-ricerca{background: #000000; height: 90px; width: 100%; display: block; position: relative;}
+
 /* Barra di ricerca */
 @import url('https://fonts.googleapis.com/css?family=Inconsolata:700');
 

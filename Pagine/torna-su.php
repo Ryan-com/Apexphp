@@ -1,4 +1,4 @@
-<button id="torna-su" onclick="scrollToTop()"> <img src="../Foto/Icons/" alt=""> <img src="../Foto/Icons/white-down-arrow.png" alt=""></button>
+<button id="torna-su" onclick="scrollToTop()"> <img src="../Foto/Icons/" alt=""> <img src="../Foto/Icons/down-arrow.png" alt=""></button>
 <script>
   window.onscroll = function() {scrollFunction()};
   
