@@ -1,0 +1,12 @@
+.container_utente{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.utenti{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
