@@ -1,3 +1,14 @@
+<?php
+    if (isset($_GET["input-ricerca"])) {
+        $input_ricerca = $_GET["input-ricerca"]; 
+    }
+    else {
+        $input_ricerca="";
+    }
+    echo("<script>console.log('PHP: " . $input_ricerca . "');</script>");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,52 +37,42 @@
     </main>
     
     <div class="divisorio-ricerca">
-        <form class="search-container__bar" method="post" id="search-form">
+        <form class="search-container__bar" method="get" id="search-form">
             <input type="text" id="input-ricerca" name="input-ricerca" placeholder="Search...">
-            <div id="results" class="search"  ></div>
+            <div id="results" class="search"></div>
+            <input type="submit" hidden />
         </form>
+
+        <!-- <form action="" method="get">
+            <input type="text" name="input-ricerca">
+            <input type="submit" value="Cerca">
+        </form> -->
     </div>
+
+    <!-- <?php
+        echo "<p>NOME PERSONAGGIO: $input_ricerca - </p>";
+    ?> -->
 
     <div class="legends-background">
         <div class="banners">
             <?php 
                 require("../data/connessione.php");
-                if(isset($_POST["input_ricerca"])){
-                    $nome = $_POST["input_ricerca"];
-                    $sql = "SELECT nome_leggenda, banner, professione
-                            FROM leggende
-                            WHERE nome_leggenda LIKE '%$nome%'";
-            
-                    $ris = $conn->query($sql) or die("Query fallita!");
+
+                $sql = "SELECT nome_leggenda, banner, professione
+                        FROM leggende
+                        WHERE nome_leggenda LIKE '%$input_ricerca%'";
+        
+                $ris = $conn->query($sql) or die("Query fallita!");
+
+
+                if($ris->num_rows > 0){
+                    // $nome = $_GET["input-ricerca"];
             
                     foreach($ris as $riga){
                         $nome_leggenda = $riga["nome_leggenda"];
                         $banner = $riga["banner"];
                         $professione = $riga["professione"];
             
-                        echo <<<EOD
-                            <div class="">
-                                <div class="banners">
-                                    <a href="personaggio.php?nome_leggenda=$nome_leggenda">
-                                        <div class="banner">
-                                            <img class="banner__img" src="../Foto/legends-banner/$banner" alt="$banner">
-                                            <div class="banner__copy">
-                                                <h3>$nome_leggenda</h3>
-                                                <p>$professione</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        EOD;
-                    }
-                } else if(!isset($_POST["input_ricerca"])) {
-                    $sql = "SELECT nome_leggenda, banner, professione FROM leggende";
-                    $ris = $conn->query($sql) or die("Query fallita!");
-                    foreach($ris as $riga){
-                        $nome_leggenda = $riga["nome_leggenda"];
-                        $banner = $riga["banner"];
-                        $professione = $riga["professione"];
                         echo <<<EOD
                             <a href="personaggio.php?nome_leggenda=$nome_leggenda">
                                 <div class="banner">
@@ -84,8 +85,7 @@
                             </a>
                         EOD;
                     }
-                } 
-                else{
+                } else{
                     echo "<p>Nessun risultato trovato<?p>";
                 }
             ?>
@@ -93,7 +93,7 @@
     </div>
     <?php require("torna-su.php"); ?>
 
-    <script>
+    <!-- <script>
         $(document).ready(function() {
             $('#search-form').on('submit', function(e) {
                 e.preventDefault();  // Prevent the default form submission
@@ -111,6 +111,19 @@
                     }
                 });
             });
+        });
+    </script> -->
+
+    <script>
+        window.addEventListener('beforeunload', function() {
+            localStorage.setItem('scrollPosition', window.scrollY);
+        });
+
+        window.addEventListener('load', function() {
+            const scrollPosition = localStorage.getItem('scrollPosition');
+            if (scrollPosition) {
+                window.scrollTo(0, scrollPosition);
+            }
         });
     </script>
 

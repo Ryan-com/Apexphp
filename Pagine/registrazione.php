@@ -24,9 +24,9 @@
 
 <body>
 
-    <div>
+    <div class="container-registrazione">
         <h1>Registrazione</h1>
-        <p style="display:flex; text-align:center;">Immergiti subito nel modo di Apex, ma prima unisciti alla nostra squadra</p>
+        <p style="display:flex; text-align:center;">Immergiti subito nel mondo di Apex Legends™, ma prima unisciti al team Apex!</p>
         <form action="" method="post">
             <table>
                 <tr>

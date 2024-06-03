@@ -85,7 +85,7 @@ p{line-height: 28px; color: #666; font-weight: 300;}
     z-index: 10;
     margin: 0;
     width: 100%;
-    background-color: #ff0000;
+    background-color: #000000;
     position: fixed; /*Posizionamento che mi lascia la cosa fissa dov'è anche dopo che scorro*/
     top: 0;
     padding: 20px 15px;
@@ -312,7 +312,7 @@ p{line-height: 28px; color: #666; font-weight: 300;}
 
 
 
-#torna-su img{height: 40px; rotate: 180deg;}
+#torna-su img{height: 25px; rotate: 180deg;}
 
 #torna-su:hover {
   background-color: #555;
@@ -514,7 +514,9 @@ button {
 
 
 
-
+.container-registrazione{
+  padding-top: 74px;
+}
 
 
 

@@ -3,7 +3,7 @@ a{text-decoration: none;}
 
 
 .main1{
-    background: black;
+    background: #161616;
     margin: 0;
     /* width: 100%; */
 }
@@ -12,17 +12,20 @@ a{text-decoration: none;}
 
 .cover1{
     position:relative;
-    width: 100%;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
 }
+
 
 .wp{
     width: 100%;
     /* height: auto; */
-    padding: 96px 0 0 0;
-    /* left: 50%; */
+    padding: 74px 0 0 0;
     mask-image: linear-gradient(rgb(0, 0, 0) 70%, rgba(0, 0, 0, 0) 98%);
     margin-bottom: 20px;
 }
+
 
 .main_name{
     font-family: "Protest Revolution", sans-serif; 
