@@ -43,10 +43,6 @@
             <input type="submit" hidden />
         </form>
 
-        <!-- <form action="" method="get">
-            <input type="text" name="input-ricerca">
-            <input type="submit" value="Cerca">
-        </form> -->
     </div>
 
     <!-- <?php
@@ -60,7 +56,7 @@
 
                 $sql = "SELECT nome_leggenda, banner, professione
                         FROM leggende
-                        WHERE nome_leggenda LIKE '%$input_ricerca%'";
+                        WHERE nome_leggenda LIKE '$input_ricerca%'";
         
                 $ris = $conn->query($sql) or die("Query fallita!");
 
@@ -92,27 +88,6 @@
         </div>
     </div>
     <?php require("torna-su.php"); ?>
-
-    <!-- <script>
-        $(document).ready(function() {
-            $('#search-form').on('submit', function(e) {
-                e.preventDefault();  // Prevent the default form submission
-                var searchQuery = $('#input-ricerca').val();
-                
-                $.ajax({
-                    type: 'POST',
-                    url: 'ricerca.php',  // The server-side script to handle the search query
-                    data: { input_ricerca: searchQuery },
-                    success: function(response) {
-                        // Update the results div with the search results
-                        $('#results').html(response);
-                        // Hide the original list of legends
-                        $('.banners').hide();
-                    }
-                });
-            });
-        });
-    </script> -->
 
     <script>
         window.addEventListener('beforeunload', function() {
