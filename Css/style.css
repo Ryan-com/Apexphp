@@ -244,7 +244,7 @@ p{line-height: 28px; color: #666; font-weight: 300;}
   transform: translate(-50%, -20%);
 }
 
-.button2{background-color: #da292a; color: #fff; display: inline-block; border-radius: 1px; text-align: center; padding: 17px 20px;}
+/* .button2{background-color: #da292a; color: #fff; display: inline-block; border-radius: 1px; text-align: center; padding: 17px 20px;} */
 .cover__tasto{
   z-index: 2;
   display: flex;
@@ -299,7 +299,8 @@ p{line-height: 28px; color: #666; font-weight: 300;}
   width: 30%;
 }
 
-.button2{background-color: #da292a; color: #fff; display: inline-block; border-radius: 1px; text-align: center; padding: 25px;}
+.button2{background-color: #da292a; color: #fff; display: inline-block; border-radius: 1px; text-align: center; padding: 20px;}
+
 .cover-main__content a{
   margin-top: 20px;
   transform: translateX(50%);
