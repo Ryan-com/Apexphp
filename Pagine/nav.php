@@ -33,7 +33,7 @@
     </div>
 
     <div class="avatar-menu">
-        <a href="registrazione.php"> <img src="../Foto/Icons/user2.png" alt="user2.png"> </a>
+        <a href="accedi.php"> <img src="../Foto/Icons/user2.png" alt="user2.png"> </a>
     </div>
 
     <div class="hamburger">
