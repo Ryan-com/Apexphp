@@ -1,5 +1,4 @@
-
-    *{box-sizing: border-box; font-family: "TT Lakes Regular", sans-serif; user-select: none;}
+  *{box-sizing: border-box; font-family: "TT Lakes Regular", sans-serif; user-select: none;}
 
 
 /* TOGLIE IL FASTIDIOSO BORDO ATTORNO ALLA PAGINA */
@@ -96,14 +95,14 @@ body{padding: 0;margin: 0;}
     height: 100%;
     overflow: hidden;
     z-index: -1;
-    position: fixed;
+    position: cover;
 }
 .background img{
-    height: 150%;
-    left: -10%;
+    width: 110%;
+    left: -2%;
     top: -5%;
-
     position: fixed;
+    filter: blur(6px) brightness(40%);
 }
 
 
@@ -120,6 +119,7 @@ main{
     color: white;
     margin: auto auto;
     text-align: center;
+    width: 550px;
     border-radius: 50px;
     border: 3px solid white;
 	box-shadow: 0px 0px 40px black;
@@ -127,15 +127,22 @@ main{
     padding: 20px;
 }
 .panel form{
-    padding-top: 10px;
-}
-.panel form table{
-    margin: auto;
-    text-align: left;
-}
-.panel form input{
+    padding: 0 20px;
 
 }
+.panel form table{
+    text-align: left;
+    font-size: 20px;
+}
+.panel form input{
+    margin: 7px 0 15px 0;
+    padding: 4px 10px;
+    width: 464px;
+    height: 40px;
+    font-size: 20px;
+}
+
+
 .panel a{
     display: block;
     position: absolute;
@@ -151,8 +158,8 @@ main{
     width: 100%;
     bottom: 30px;
 }
-#username, #password, #conferma, #nome, #cognome, #telefono{
-    border-radius: 7px;
+#username, #password, #conferma, #nome, #cognome, #telefono, #email{
+    border-radius: 0px;
     outline: auto;
 }
 .panel .submit{
@@ -170,12 +177,11 @@ main{
 }
 
 .panel .home_button{
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     position: absolute;
-    /* margin: 0; */
     right: -220px;
-    top: -380px;
+    top: -770px;
 }
 .panel .home_button img{
     width: 100%;
@@ -202,13 +208,17 @@ main{
     padding-top: 10px;
 }
 .panel-accedi form table{
-    margin: auto;
     text-align: left;
 }
+.panel-accedi form label{
+    padding-right: 5px;
+}
+
 .panel-accedi form input{
     padding: 5px;
-    margin: 1px;
+    margin: 5px 0;
     width: 350px;
+    height: 40px;
 }
 .panel-accedi a{
     display: block;
@@ -233,11 +243,11 @@ main{
     font-size: 16px;
     cursor: pointer;
     border-radius: 7px;
-    background: rgb(0, 149, 255);
+    background: white;
     border: 1px solid white;
 }
 .panel-accedi .submit:hover{
-    background-color: rgb(0, 107, 183);
+    background-color: #da292a;
 }
 
 .panel-accedi .home_button{
@@ -256,9 +266,9 @@ main{
 
 
 
-
 ul {
 list-style-type: none;
+padding: 0;
 }
 
 li {
@@ -270,7 +280,6 @@ display: none;
 }
 
 label {
-    /* border: 1px solid #fff; */
     padding: 2px;
     display: block;
     position: relative;
@@ -296,10 +305,14 @@ label:before {
 }
 
 label img {
-    height: 50px;
-    width: 50px;
+    height: 120px;
+    width: 120px;
     transition-duration: 0.2s;
     transform-origin: 50% 50%;
+    border: 1px solid #333;
+    padding: 10px;
+    border-radius: 100px; 
+    margin: 10px;
 }
 
 :checked + label {
@@ -314,6 +327,6 @@ label img {
 
 :checked + label img {
     transform: scale(0.9);
-    box-shadow: 0 0 5px #333;
+    box-shadow: 0 0 5px #585858;
     z-index: -1;
 }

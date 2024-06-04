@@ -1,7 +1,3 @@
-<?php
-    session_start();
-?>
-
 <div class="header">
     <div class="logo-menu">
         <a href="../index.php"> <img src="../Foto/Logos/apex-white-nav-logo.svg" alt=""> </a>
@@ -23,18 +19,35 @@
         
         <li><a href="mappe.php" class="menu-text">Mappe</a> </li>
         <li><a href="gg.php"  class="menu-text"> Community </a> </li>
+        <?php
+            if(isset($_SESSION["username"])){
+                echo "<li><a href='statistiche.php' class='menu-text'>Statistiche</a> </li>";
+            }
+        ?>
 
     </ul>
 
 
-    <!-- Call to action -->
     <div class="cta">
         <a href="https://www.ea.com/it-it/games/apex-legends/buy/pc" class="button button-text"> Scarica gratis </a>
     </div>
 
-    <div class="avatar-menu">
-        <a href="accedi.php"> <img src="../Foto/Icons/user2.png" alt="user2.png"> </a>
-    </div>
+    <?php
+        if(isset($_SESSION["username"])){
+            echo "<div class='logout-menu'>
+                    <a href='logout.php'> <h4 style='padding: 12px 30px; font-size:30px; border: 1px solid #f3f3f3' class='menu-text'>Logout</h4> </a>
+                </div>
+                <div class='avatar-menu'>
+                    <img src='$foto_profilo' alt='user-image'> 
+                </div>";
+        } else{
+            echo "<div class='avatar-menu'>
+                <a href='accedi.php'> <img src='../Foto/Icons/user2.png' alt='user2.png'> </a>
+            </div>";
+        }
+    ?>
+            
+    
 
     <div class="hamburger">
         <span></span>
@@ -45,6 +58,8 @@
 
 </div>
 
+
+<!-- Per farlo responsive -->
 <div class="menu-panel">
     <div class="logo-menu">
         <a href="../index.php"> <img src="../Foto/Logos/apex-white-nav-logo.svg" alt=""> </a>
@@ -64,10 +79,6 @@
 
         <h3 class="menu-text"> <a href="gg.php"  class="menu-text"> Community </a></h3>
         
-    <?php
-    if(isset($_SESSION["username"])){
-        echo "  <h3 class='menu-text'> <a href='https://answers.ea.com/t5/Apex-Legends/ct-p/apex-legends-it?profile.language=it'  class='menu-text'> Nuovo</a></h3>";
-    }?>
 
     </ul>
 </div>

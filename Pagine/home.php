@@ -1,10 +1,19 @@
 <?php
     session_start();
-    if(!isset($_SESSION["username"])){
-       $username = "";
-    } else{
-        $username = $_SESSION["username"];
+    require("../data/connessione.php");
+    if(!isset($_SESSION["username"]) or !isset($_SESSION["foto_profilo"])){
+        $username = "";
+        $foto_profilo="";
     }
+    $username = $_SESSION["username"];
+    
+    $sql="SELECT foto_profilo
+          FROM utenti
+          WHERE username='$username'";
+    $ris = $conn->query($sql) or die("<p>Query fallita!</p>");
+    $riga = $ris->fetch_assoc();
+    $foto_profilo = $riga["foto_profilo"];
+
 ?>
 
 
@@ -42,7 +51,6 @@
                 <source src="../Foto/Logos/Apex Legends_ Breakout Launch Trailer.mp4" type="video/mp4">
             </video>
         </div>
-
         <!-- <div class="divisorio"></div> -->
 
         <div class="cover-main">
@@ -61,6 +69,8 @@
                 </div>
             </div>
         </div>
+
+        
 
     </main>
 
