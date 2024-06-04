@@ -7,9 +7,9 @@
     }
     $username = $_SESSION["username"];
     
-    $sql="SELECT foto_profilo
-          FROM utenti
-          WHERE username='$username'";
+    $sql = "SELECT foto_profilo
+            FROM utenti
+            WHERE username='$username'";
     $ris = $conn->query($sql) or die("<p>Query fallita!</p>");
     $riga = $ris->fetch_assoc();
     $foto_profilo = $riga["foto_profilo"];

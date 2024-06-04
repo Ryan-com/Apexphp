@@ -62,7 +62,7 @@ p{line-height: 28px; color: #666; font-weight: 300;}
   z-index: 1;
   display: flex;
   justify-content: center;
-  padding: 4px 17px;
+  margin: 4px 17px;
   
 }
 .avatar-menu a:hover{background: #363636;}
@@ -73,8 +73,8 @@ p{line-height: 28px; color: #666; font-weight: 300;}
   font-family: 'Duke Fill'; font-size: 24px; text-transform: uppercase; color: #f3f3f3; text-decoration:none;
 }
 
-.logo-menu a:hover{
-  background: #f3f3f3;
+.logout-menu{
+  display: flex;
 }
 
 

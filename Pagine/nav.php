@@ -1,3 +1,4 @@
+
 <div class="header">
     <div class="logo-menu">
         <a href="../index.php"> <img src="../Foto/Logos/apex-white-nav-logo.svg" alt=""> </a>
@@ -34,12 +35,15 @@
 
     <?php
         if(isset($_SESSION["username"])){
-            echo "<div class='logout-menu'>
-                    <a href='logout.php'> <h4 style='padding: 12px 30px; font-size:30px; border: 1px solid #f3f3f3' class='menu-text'>Logout</h4> </a>
-                </div>
-                <div class='avatar-menu'>
-                    <img src='$foto_profilo' alt='user-image'> 
-                </div>";
+            echo "  <div style='padding: 0 30px 0 10px;' >
+                        <a href='logout.php' style='display:flex;  border: 2px solid #1c1c1c;' id='logout-link' >
+                            <style> #logout-link:hover{background-color: #363636;} </style>
+                            <h4 style='padding: 12px 10px 12px 20px; font-size:30px;' class='menu-text'>Logout</h4> 
+                            <div class='avatar-menu'>
+                                <img src='$foto_profilo' alt='user-image' > 
+                            </div>
+                        </a>
+                    </div>";
         } else{
             echo "<div class='avatar-menu'>
                 <a href='accedi.php'> <img src='../Foto/Icons/user2.png' alt='user2.png'> </a>
