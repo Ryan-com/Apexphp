@@ -63,7 +63,6 @@ p{line-height: 28px; color: #666; font-weight: 300;}
   display: flex;
   justify-content: center;
   margin: 4px 17px;
-  
 }
 .avatar-menu a:hover{background: #363636;}
 
@@ -194,6 +193,8 @@ p{line-height: 28px; color: #666; font-weight: 300;}
 .tendina-info a:hover{color: #da292a;}
 
 
+
+
 /* ! Background video principale */
 .cover{
   border-top: 0;
@@ -201,8 +202,6 @@ p{line-height: 28px; color: #666; font-weight: 300;}
   border-bottom: 0px; 
   overflow: hidden;
 }
-
-
 
 .cover:after{
   content: ' ';
@@ -217,7 +216,7 @@ p{line-height: 28px; color: #666; font-weight: 300;}
 
 .video-class{
   z-index: 0;
-  padding: 42px 0 0 0;
+  /* padding-top: 74px; */
   min-width: 100%;
   height: auto;
   position: relative;
@@ -328,32 +327,6 @@ p{line-height: 28px; color: #666; font-weight: 300;}
   margin: 0 5%;
 }
 
-@media (min-width: 650px) and ( max-width: 1100px) {
-  .video-class{position: relative;}
-  
-  .cover__logo{
-    height: 40%;
-  }
-
-  .cover__content{
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .sublogo-text{font-size: 150%;}
-}
-
-@media (max-width: 700px) {
-  .cover__logo{
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 40%;
-  }
-  .cover__content{display: none;}
-}
-
 
 /* ! Pulsante TornaSu*/
 #torna-su {
@@ -369,8 +342,6 @@ p{line-height: 28px; color: #666; font-weight: 300;}
   background: black;
   z-index: 10;
 }
-
-
 
 #torna-su img{height: 25px; rotate: 180deg;}
 
@@ -401,13 +372,34 @@ p{line-height: 28px; color: #666; font-weight: 300;}
 }
 
 
-.divisorio{background-color: #000; height: 50px; width: 100%; display: block;}
 
 
 
+@media (min-width: 650px) and ( max-width: 1100px) {
+  .video-class{position: relative;}
+  
+  .cover__logo{
+    height: 40%;
+  }
 
+  .cover__content{
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
+  .sublogo-text{font-size: 150%;}
+}
 
+@media (max-width: 700px) {
+  .cover__logo{
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 40%;
+  }
+  .cover__content{display: none;}
+}
 
 
 

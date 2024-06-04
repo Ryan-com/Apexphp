@@ -26,9 +26,9 @@
     <?php require("include.php") ?>
 </head>
 
+<?php require("nav.php"); ?>
 <body class="main1">
 
-    <?php require("nav.php"); ?>
 
     <main class="container">
 
@@ -46,6 +46,7 @@
             <div class="cover__tasto">
                 <a href="https://www.youtube.com/watch?v=JK2p-vZNfPA" class="button2 button-text"> Guarda ora il nuovo trailer! <img src="../Foto/Icons/play-button.png" alt=""></a>
             </div>
+
             
             <video width="320" height="240" autoplay muted loop class="video-class">
                 <source src="../Foto/Logos/Apex Legends_ Breakout Launch Trailer.mp4" type="video/mp4">

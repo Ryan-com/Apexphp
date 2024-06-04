@@ -1,93 +1,11 @@
-  *{box-sizing: border-box; font-family: "TT Lakes Regular", sans-serif; user-select: none;}
+*{box-sizing: border-box; font-family: "TT Lakes Regular", sans-serif; user-select: none;}
 
-
-/* TOGLIE IL FASTIDIOSO BORDO ATTORNO ALLA PAGINA */
 body{padding: 0;margin: 0;}
 
 .page_container{
     max-width: 2000px;
     position: relative;
     overflow-x: hidden;
-}
-
-
-/* BARRA BIANCA SUPERIORE CON LOGO */
-.white_stripe{
-    background: white;
-    width: 100%;
-    height: 55px;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-}
-.white_stripe .logo:first-child{
-    margin-left: 50px;
-}
-.logo{
-    margin: 0px 0px;
-    width: 80px;
-    height: 50px;
-    padding: 5px;
-    /* background: red; */
-}
-.logo img{height: 100%;}
-.white_stripe > p{
-    font-size: 30px;
-    width: 100%;
-}
-
-/* BARRA GRIGIA CON BOTTONI NAVIGAZIONE */
-.nav_stripe{
-    background: rgb(40,40,40);
-    width: 100%;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 2px solid black;
-
-    position: absolute;
-    top: 50px;
-    z-index: 99;
-}
-.nav_stripe--scroll{
-    position: fixed;
-    top: 0px;
-}
-.category_text{
-    padding: 0px 15px;
-    font-size: 15px;
-    color: gray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.nav_button{
-    height: 100%;
-    color: lightgray;
-    transition: all 0.1s linear;
-    cursor: pointer;
-}
-.nav_button--active{
-    color: rgb(0, 149, 255);
-    border-bottom: 3px solid rgb(0, 149, 255);
-}
-.nav_button a{
-    font-size: 15px;
-    width: 100%; height: 100%;
-    padding: 0px 15px;
-    text-decoration: none;
-    display: block;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.nav_button p{
-    margin: 0;
-    transition: all 0.1s linear;
-}
-.nav_button:hover p{
-    color: rgb(0, 149, 255);
 }
 
 
@@ -104,7 +22,6 @@ body{padding: 0;margin: 0;}
     position: fixed;
     filter: blur(6px) brightness(40%);
 }
-
 
 main{
     display: flex;
@@ -142,7 +59,6 @@ main{
     font-size: 20px;
 }
 
-
 .panel a{
     display: block;
     position: absolute;
@@ -156,6 +72,7 @@ main{
 .panel hr{
     position: absolute;
     width: 100%;
+    right: 0%;
     bottom: 30px;
 }
 #username, #password, #conferma, #nome, #cognome, #telefono, #email{
@@ -189,6 +106,7 @@ main{
 .panel .home_button img:hover{
     filter: brightness(80%);
 }
+
 
 /* Panel accedi */
 .panel-accedi{
@@ -266,15 +184,12 @@ main{
 
 
 
-ul {
-list-style-type: none;
-padding: 0;
-}
+ul{list-style-type: none; padding: 0;}
 
-li {
-display: inline-block;
-}
+li{display: inline-block;}
 
+
+/*! Gestione foto profilo */
 input[type="radio"][id^="cb"] {
 display: none;
 }
@@ -329,4 +244,9 @@ label img {
     transform: scale(0.9);
     box-shadow: 0 0 5px #585858;
     z-index: -1;
+}
+
+.log{
+    padding-top: 20px;
+    font-size: 15px;
 }

@@ -11,7 +11,7 @@
             </ul>
         </li>
         
-        <li class="tendina"> <a href="" class="menu-text"> Modalità <img src="../Foto/Icons/down-arrow.png" alt="" class="freccetta"></a>
+        <li class="tendina"> <a href="#" class="menu-text"> Modalità <img src="../Foto/Icons/down-arrow.png" alt="" class="freccetta"></a>
             <ul class="tendina-info">
                 <a href="battle-royale.php" class="menu-subtext">Battle Royale</a>
             </ul>
@@ -35,9 +35,9 @@
     <?php
         if(isset($_SESSION["username"])){
             echo "  <div style='padding: 0 30px 0 10px;' >
-                        <a href='logout.php' style='display:flex;  border: 2px solid #1c1c1c;' id='logout-link' >
+                        <a href='logout.php' style='display:flex;  border: 2px solid #1c1c1c; height:54px;' id='logout-link' >
                             <style> #logout-link:hover{background-color: #363636;} </style>
-                            <h4 style='padding: 12px 10px 12px 20px; font-size:30px;' class='menu-text'>Logout</h4> 
+                            <h4 style='padding: 11px 12px 11px 20px; font-size:30px;' class='menu-text'>Logout</h4> 
                             <div class='avatar-menu'>
                                 <img src='$foto_profilo' alt='user-image' > 
                             </div>
