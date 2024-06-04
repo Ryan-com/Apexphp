@@ -72,7 +72,7 @@
                         </li>
                         <li>
                             <input type="radio" name="test" id="cb4" />
-                            <label for="cb4"><img src="../Foto/Foto-profilo/Pathfinder-foto-profilo.png" /></label>
+                            <label for="cb5"><img src="../Foto/Foto-profilo/Pathfinder-foto-profilo.png" /></label>
                         </li>
                     </ul>
                 </table>
