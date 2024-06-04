@@ -56,11 +56,11 @@
                     <ul>
                         <li>
                             <input type="radio" name="test" id="cb1" />
-                            <label for="cb1"><img src="../Foto/Foto-profilo/Ash-foto-profilo.png" /></label>
+                            <label for="cb1"><img src="../Foto/Foto-profilo/Ash-foto-profilo.png" alt=""></label>
                         </li>
                         <li>
                             <input type="radio" name="test" id="cb2" />
-                            <label for="cb2"><img src="../Foto/Foto-profilo/Bloodhound-foto-profilo.png" /></label>
+                            <label for="cb2"><img src="../Foto/Icon/user2.png" /></label>
                         </li>
                         <li>
                             <input type="radio" name="test" id="cb3" />
