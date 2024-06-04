@@ -1,0 +1,13 @@
+Le cose che mancano sono le seguenti:
+
+-statistiche (Brambo)
+-sistemare home (in lavorazione... Ryan)
+-sistemare accedi (in lavorazione... Ryan)
+-sistemare registrati (in lavorazione... Ryan)
+-aggiungere dati al db
+-sistemare leggende.php
+-sistemare battle-royale.php
+-sistemare mappe.php
+-sistemare nav (FATTO)
+
+

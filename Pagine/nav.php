@@ -1,4 +1,3 @@
-
 <div class="header">
     <div class="logo-menu">
         <a href="../index.php"> <img src="../Foto/Logos/apex-white-nav-logo.svg" alt=""> </a>
