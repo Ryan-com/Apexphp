@@ -1,9 +1,10 @@
 <?php
     session_start();
     if(!isset($_SESSION["username"])){
-        header("location: index.php");
+       $username = "";
+    } else{
+        $username = $_SESSION["username"];
     }
-    $username = $_SESSION["username"];
 ?>
 
 
