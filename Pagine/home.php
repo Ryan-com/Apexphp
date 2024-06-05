@@ -36,15 +36,12 @@
 
         <div class="cover">
             
-            <div class="cover__logo">
-                <img  src="../Foto/Logos/apex-hero-medium-logo-light.svg" alt="">
-            </div>
-            
+            <!-- <div class="cover__logo">
+                </div> -->
             <div class="cover__content">
-                <h2 class="sublogo-text tw"> Affronta la nuova stagione di Apex Legends™: Scintilla!</h2>
-            </div>
-            <div class="cover__tasto">
-                <a href="https://www.youtube.com/watch?v=JK2p-vZNfPA" class="button2 button-text"> Guarda ora il nuovo trailer! <img src="../Foto/Icons/play-button.png" alt=""></a>
+                <img  src="../Foto/Logos/apex-hero-medium-logo-light.svg" alt="">
+                <h2 class="sublogo-text tw"> Affronta la nuova stagione di Apex Legends™: Scintilla!</h2>    
+                <a href="https://www.youtube.com/watch?v=JK2p-vZNfPA" class="button2 button-text"> Guarda ora il nuovo trailer! <img src="../Foto/Icons/play-button.png" alt="" id="tasto-play"></a>
             </div>
 
             
@@ -55,20 +52,15 @@
         <!-- <div class="divisorio"></div> -->
 
         <div class="cover-main">
-            <div class="cover-main__background">
-                <img src="../Foto/Foto main/sfondo-main.jpg" alt="sfondo-main.jpg">
-                <div class="cover-main__contenitore">
-                    <div class="cover-main__logo">
-                        <img src="../Foto/Logos/Apex-legends-logo.png" alt="Apex-legends-logo.png">
-                    </div>
-                    <div class="cover-main__content">
-                        <p class="logo-subtext-main bt">Scatenati nella nuova stagione: Scintilla!</p>
-                        <br></br>
-                        <p class="logo-subtext-main bt">Entra a far parte del team Apex qui sotto!</p>
-                        <a href="https://www.youtube.com/watch?v=JK2p-vZNfPA" class="button2 button-text2">Registrati!</a>
-                    </div>
-                </div>
+            <img src="../Foto/Foto main/sfondo-main.jpg" alt="sfondo-main.jpg">
+            <div class="cover-main__content">
+                <img src="../Foto/Logos/Apex-legends-logo.png" alt="Apex-legends-logo.png">
+                <br></br>
+                <p class="logo-subtext-main bt">Scatenati nella nuova stagione: Scintilla!</p>
+                <p class="logo-subtext-main bt">Entra a far parte del team Apex qui sotto!</p>
+                <a href="https://www.youtube.com/watch?v=JK2p-vZNfPA" class="button2 button-text2">Registrati!</a>
             </div>
+            
         </div>
 
         
