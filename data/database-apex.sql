@@ -14,6 +14,11 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+
+-- Dump della struttura del databse database-apex
+CREATE DATABASE IF NOT EXISTS `database-apex`
+USE `database-apex`;
+
 -- Dump della struttura di tabella database-apex.arene
 CREATE TABLE IF NOT EXISTS `arene` (
   `nome_arena` char(50) NOT NULL DEFAULT '',
@@ -114,3 +119,4 @@ INSERT INTO `utenti` (`username`, `password`, `email`, `foto_profilo`) VALUES
 /*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40111 SET SQL_NOTES=IFNULL(@OLD_SQL_NOTES, 1) */;
+information_schema
