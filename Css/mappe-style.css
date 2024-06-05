@@ -2,6 +2,11 @@ body{font-family: "TT Lakes Regular", sans-serif; font-size: 16px; margin: 0; ba
 a{text-decoration: none;}
 
 
+
+.top{
+    padding-top: 80px;
+}
+
 .sfondo__tot{  
     padding: 20px;
     display: flex;
@@ -25,10 +30,12 @@ a{text-decoration: none;}
 }
 
 .abs{
-    font-family: "TT Lakes Regular" sans-serif;
-    font-style: italic;
+    font-family: "TT lakes regular", sans-serif;
     font-size: 140%;
     color: rgb(255, 255, 255);
+}
+.abs:hover{
+    color: #da292a;
 }
 
 ul.slides {
@@ -157,24 +164,34 @@ input#img-6:checked ~ .carousel-dots label#img-dot-6 {
 
 input:checked + .slide-container .nav label { display: block; }
 
-.tit{
-    font-family: "Protest Revolution", sans-serif; 
+
+.sfondo{
+    background-image: url("../Foto/Foto\ main/sfondino-leggende.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    filter: brightness(90%);
+}
+
+.nome_arena{
+    font-family: "Teko", sans-serif; 
     font-style: italic;
-    color: #fff;
-    /* text-transform: uppercase; */
+    color: #000;
     font-size: 7vw;
     text-align: center;
     margin: 110px 0 10px 0;
 }
 
-.container-mappe{
+.info{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(29, 28, 30);
+    background: rgb(20,20,20);
+    color: white;
+    border: 3px solid white;
+	box-shadow: 0px 0px 40px black;
     margin: 0 30px;
     border-radius: 30px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    padding: 50px;
 }
 
 .mappa{
@@ -183,17 +200,17 @@ input:checked + .slide-container .nav label { display: block; }
     padding: 40px;
 }
 
-.descriziones{
-    font-family: "TT Lakes Regular" sans-serif;
+.descrizione{
+    font-family: "TT Lakes W05 Regular" sans-serif;
     font-style: italic;
-    font-size: 140%;
-    text-align: center;
+    font-size: 170%;
+    text-align: left;
     padding: 40px;
     top: 50%;
-    color: #fff;
+    color: #F3F3F3;
+    line-height: 33px;
 }
 
-.ghost{color: rgb(29, 28, 30);}
 
 @media (max-width: 1100px){
     .titolo-mappa{

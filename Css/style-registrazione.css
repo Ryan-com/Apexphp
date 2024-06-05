@@ -34,12 +34,12 @@ main{
 .panel{
     background: rgb(20,20,20);
     color: white;
-    margin: auto auto;
-    text-align: center;
-    width: 550px;
     border-radius: 50px;
     border: 3px solid white;
 	box-shadow: 0px 0px 40px black;
+    margin: auto auto;
+    text-align: center;
+    width: 550px;
     position: relative;
     padding: 20px;
 }
@@ -80,17 +80,19 @@ main{
     outline: auto;
 }
 .panel .submit{
-    font-weight: bold;
+    font-weight: 550;
     width: 100px;
-    height: 30px;
-    font-size: 16px;
+    height: 32px;
+    font-family: "TT Lakes Regular", sans-serif;
+    color: #f3f3f3;
+    font-size: 20px;
     cursor: pointer;
     border-radius: 7px;
-    background: rgb(0, 149, 255);
+    background: #da292a;
     border: 1px solid white;
 }
 .panel .submit:hover{
-    background-color: rgb(0, 107, 183);
+    background-color: #a81f1f;
 }
 
 .panel .home_button{
@@ -112,8 +114,8 @@ main{
 .panel-accedi{
     background: rgb(20,20,20);
     color: white;
+    font-family: "TT Lakes Regular", sans-serif;
     width: 400px;
-    height: 350px;
     margin: auto auto;
     text-align: center;
     border-radius: 50px;
@@ -127,16 +129,26 @@ main{
 }
 .panel-accedi form table{
     text-align: left;
+    font-size: 20px;
 }
 .panel-accedi form label{
     padding-right: 5px;
+    font-family: "TT Lakes Regular", sans-serif;
+
+    
+}
+.panel-accedi form table{
+    text-align: left;
+    font-size: 20px;
 }
 
 .panel-accedi form input{
-    padding: 5px;
-    margin: 5px 0;
+    margin: 7px 0 15px 0;
+    padding: 4px 10px;
     width: 350px;
     height: 40px;
+    font-size: 20px;
+    font-family: "TT Lakes Regular", sans-serif;
 }
 .panel-accedi a{
     display: block;
@@ -151,29 +163,32 @@ main{
 .panel-accedi hr{
     position: absolute;
     width: 100%;
-    bottom: 40px;
+    right: 0%;
+    bottom: 30px;
 }
 
 .panel-accedi .submit{
-    font-weight: bold;
+    font-weight: 550;
     width: 100px;
-    height: 30px;
-    font-size: 16px;
+    height: 32px;
+    font-family: "TT Lakes Regular", sans-serif;
+    color: #f3f3f3;
+    font-size: 20px;
     cursor: pointer;
     border-radius: 7px;
-    background: white;
+    background: #da292a;
     border: 1px solid white;
 }
 .panel-accedi .submit:hover{
-    background-color: #da292a;
+    background-color: #a81f1f;
 }
 
 .panel-accedi .home_button{
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     position: absolute;
-    right: -220px;
-    top: -380px;
+    right: -140px;
+    top: -300px;
 }
 .panel-accedi .home_button img{
     width: 100%;

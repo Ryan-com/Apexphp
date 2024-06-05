@@ -12,7 +12,7 @@
         $ris = $conn->query($sql) or die("Query fallita!");
         if ($ris->num_rows == 0) {
             // decidere che cosa fare
-            die ("Libro non trovato!");
+            die ("Personaggio non trovato");
         }else{
             $riga = $ris->fetch_assoc();
             $descrizione = $riga["descrizione_txt"];
@@ -21,6 +21,21 @@
             $link = $riga["link_video"];
         }
     }
+
+    session_start();
+    require("../data/connessione.php");
+    if(!isset($_SESSION["username"]) or !isset($_SESSION["foto_profilo"])){
+        $username = "";
+        $foto_profilo="";
+    }
+    $username = $_SESSION["username"];
+    
+    $sql = "SELECT foto_profilo
+            FROM utenti
+            WHERE username='$username'";
+    $ris = $conn->query($sql) or die("<p>Query fallita!</p>");
+    $riga = $ris->fetch_assoc();
+    $foto_profilo = $riga["foto_profilo"];
 
 ?>
 

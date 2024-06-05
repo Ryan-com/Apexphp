@@ -1,6 +1,8 @@
-
+*,body, p, h2,h3,h4{font-family: "TT Lakes Regular", sans-serif; font-size: 16px;}
 /* ! Styles */
 /* fare stili in percentuale e mediaquery */
+
+
 
 .logo-text{
   font-family: "Teko", sans-serif;
@@ -15,10 +17,11 @@
   font-size: 2vw;
   text-align: center;
   color: #fff;
+  font-family: "TT Lakes Regular", sans-serif;
 }
 
-.card-title{color: #fff; font-weight: 800; font-size: 4vw;}
-.card-text{color: #fff; font-size: 2vw; padding: 10px 20px; box-sizing: border-box;}
+.card-title{color: #fff; font-weight: 800; font-size: 50px;}
+.card-text{color: #fff; font-size: 20px;  box-sizing: border-box; font-family: "TT Lakes W05", sans-serif;}
 
 
 
@@ -28,6 +31,7 @@
   position: relative;
   overflow: hidden;
   border: 0;
+  margin: 0;
 }
 
 .coverbr img{
@@ -64,11 +68,12 @@
   transform: translate(-50%, -20%);
 }
 
-.divisorio{background: #000; height: 50px; width: 100%; display: block;}
+.divisorio{background: #000; height: 50px; width: 100%; display: block; margin: 0;}
 
 .sfondo-br{
   padding: 60px;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
   background-image: url("../Foto/Foto main/sfondo\ br2.jpg_large"); /* Aggiunge lo sfondo */
@@ -78,32 +83,39 @@
 }
 
 .brcard{
-  background-color: #111111;
-  border-radius: 20px;
-  width: 100%;
-  margin-bottom: 50px;
-  overflow: hidden;
-  position: relative;
-}
-
-.brcard__container{width: 90%;}
-
-.brcard__container img{float: left; width: 50%; height: 40%; position: relative;}
-
-.brcard__container2{
-  position: relative;
-  top: 0;
-  left: 75%;
-  transform: translateX(-50%);
-  width: 50%; 
-  height: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
-  text-align: center;
+  background: rgb(20,20,20);
+  color: white;
+  border: 3px solid white;
+  box-shadow: 0px 0px 40px black;
+  margin: 30px 30px;
+  border-radius: 30px;
+  padding: 10px;
 }
 
-.brcard__content{padding: 20px; position: relative;}
+.brcard__container{
+  height: 30vw;
+  width: 60vw;
+  padding: 40px;
+}
+
+.brcard__container img{float: left; position: absolute; height: 100%;}
+
+.brcard__content{ position: absolute; top:-200%}
 .brcard__content h2{padding-bottom: 20px;}
+.card-title{padding-left: 40px; font-family: 'Teko', sans-serif;}
+.card-text{
+  font-family: "TT Lakes W05 Regular" sans-serif;
+  font-style: italic;
+  font-size: 170%;
+  text-align: left;
+  padding: 40px;
+  top: 50%;
+  color: #F3F3F3;
+  line-height: 33px;
+}
 
 @media (max-width: 768px) {
   .brcard__container2{

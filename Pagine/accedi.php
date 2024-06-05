@@ -11,28 +11,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Css/style-registrazione.css">
+    <?php require("include.php") ?>
     <title>Apex-Accesso</title>
 </head>
 <body>
     <main>
         <div class="background">
-            <img src="../Foto/Foto main/registrazione-sfondo.jpg!d" alt="">
+            <img src="../Foto/Foto main/Caustic-trap.jpg" alt="">
         </div>
 
         <div class="panel-accedi">
-            <h1>Accedi</h1>
+            <h1 style="font-size:50px; font-family: 'Teko', sans-serif; padding: 25px 0 30px 0 ">Accedi</h1>
             <form action="" method="post">
                 <table>
                     <tr><td><label for="username">Username: </label></td></tr>
-                    <tr>
-                        <td><input type="text" name="username" id="username" value="<?php echo $username ?>" required></td>
-                        
-                    </tr>
+                    <tr><td><input type="text" name="username" id="username" value="<?php echo $username ?>" required></td></tr>
+
                     <tr><td><label for="password">Password: </label></td></tr>
-                    <tr>
-                        <td><input type="password" name="password" id="password" required></td>
-                    </tr>
-                    <tr>
+                    <tr><td><input type="password" name="password" id="password" required></td></tr>
                 </table>
                 <input type="submit" value="Invia" class="submit">
             </form>

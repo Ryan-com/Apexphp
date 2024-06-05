@@ -7,7 +7,7 @@ p{line-height: 28px; color: #666; font-weight: 300;}
 
 .bt{color: #000;}
 .menu-text{font-family: "Duke Fill"; font-size: 24px; text-transform: uppercase; color: #f3f3f3;}
-.menu-subtext{font-family: "TT Lakes Regular", sans-serif; font-size: 20px; color: #fff; font-weight: 0;}
+.menu-subtext{font-family: "TT Lakes Regular", sans-serif; font-size: 16px; color: #fff; font-weight: 0;}
 .big-text{font-size: 70px; font-weight: 900;}
 .med-text{font-size: 40px;}
 .sublogo-text{font-size: 25px;}
@@ -167,20 +167,23 @@ p{line-height: 28px; color: #666; font-weight: 300;}
 
 .tendina-info{
   position: absolute;
-  padding-top: 20px;
+  padding-top: 10px;
   max-height: 0px; 
-  width: auto;
+  width: 140px;
   display: grid;
   overflow: hidden;
   transition: all 0.5s ease-in-out;
-  border-radius: 7px;
 }
 
 .tendina ul a{
-  padding: 15px 20px;
+  padding: 15px 10px;
   overflow: hidden;
-  transition: all 0.4s ease-in-out;
+  text-align: center;
+  /* transition: all 0.4s ease-in-out; */
   background: linear-gradient(0deg, rgba(0,0,0,.9), rgba(0,0,0,0.9));
+  border-bottom: 2px solid #1c1c1c;
+  border-left: 2px solid #1c1c1c;
+  border-right: 2px solid #1c1c1c;
 }
 
 .tendina a ul a{display: none;}
@@ -188,7 +191,7 @@ p{line-height: 28px; color: #666; font-weight: 300;}
 /* Gestione hover tendina */
 .tendina:hover .tendina-info{max-height: 300px;transition: all 0.4s ease;}
 .tendina a:hover{color: #da292a;}
-.tendina:hover .freccetta{transform: rotate(180deg);}
+.tendina:hover .freccetta{transform: rotate(0.5turn);}
 .tendina-info a:hover ul a{height: 50px; display: block;}
 .tendina-info a:hover{color: #da292a;}
 

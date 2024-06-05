@@ -75,6 +75,7 @@
 
     </main>
 
-    <?php require("torna-su.php"); require("footer.php");?>
+    <?php require("torna-su.php");?>
 </body>
+<?php require("footer.php");?>
 </html>

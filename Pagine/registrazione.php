@@ -31,11 +31,11 @@
                 if ($conn->query($myquery) === true) {
                     $_SESSION["username"] = $username;
                     $_SESSION["foto_profilo"] = $foto_profilo;
+                    
+                    // echo " <p>Registrazione effettuata con successo!<br>sarai ridirezionato alla home tra 5 secondi.</p>";
+                    // header('Refresh: 1; URL=home.php');
+                    header("location:home.php");
                     $conn->close();
-
-                    echo "Registrazione effettuata con successo!<br>sarai ridirezionato alla home tra 5 secondi.";
-                    header('Refresh: 5; URL=home.php');
-                    exit();
                 } else {
                     $error_message = "Non è stato possibile effettuare la registrazione per il seguente motivo: " . $conn->error;
                 }

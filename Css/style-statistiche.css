@@ -3,10 +3,23 @@
     flex-direction: column;
 }
 
-
-
 .utenti{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.statistiche{
+    display: flex;
+    flex-direction: row;
+}
+
+ul{
+    text-decoration: none;
+}
+
+li{
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
 }
