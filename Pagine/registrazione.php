@@ -127,7 +127,7 @@
                     echo "<p>$error_message</p>";
                 }
             ?>
-            <div class="log"><hr><a href="accedi.php">Hai già un account?</a></div>
+            <div class="log"><a href="accedi.php">Hai già un account?</a></div>
         </div>
     </main>
 

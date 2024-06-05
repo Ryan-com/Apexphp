@@ -58,7 +58,7 @@
                 }
             ?>
 
-            <div class="log"><hr><a href="registrazione.php">Non hai ancora un account?</a></div>
+            <div class="log"><a href="registrazione.php">Non hai ancora un account?</a></div>
             
             <a href="../index.php" class="home_button"><img src="../Foto/Icons/home.png" alt=""></a>
         </div>
