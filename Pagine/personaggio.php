@@ -65,23 +65,22 @@
                         <h1 class="name">$nome_leggenda</h1>
                     </div>
                 </div>
-        
-                
                 <div class="info">
                     <img src="../Foto/Character/$foto" alt="$foto" class="character">
+                    <img src="../Foto/Character/Ash-ct.png" alt="png" class="character-tagliato">
                     <h3 class="title">Descrizione:</h3>
                     <p class="description"><em>$descrizione</em></p>
                 </div>
         
-                <div>
-                    <iframe class="video" width="1103" height="622" src="$link" title="Incontra Ballistic | Trailer personaggio di Apex Legends" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="container-video">
+                <iframe class="video" width="700" height="550" src="$link" frameborder="0" allowfullscreen></iframe>
                 </div>
             EOD;
 
             echo "$copertina";
         ?>
     </main>
-    <?php require("torna-su.php");?>
+    <?php require("torna-su.php"); require("footer.php");?>
 
 </body>
 </html>
