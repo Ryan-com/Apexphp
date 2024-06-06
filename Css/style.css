@@ -233,7 +233,7 @@ p{line-height: 28px; color: #666; font-weight: 300;}
 
 .cover__content{
   z-index: 2;
-  padding-top: 100px;
+  padding-top: 200px;
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -286,7 +286,7 @@ p{line-height: 28px; color: #666; font-weight: 300;}
 }
 
 .cover-main__content img{
-  height: 200px;
+  height: 300px;
 }
 
 

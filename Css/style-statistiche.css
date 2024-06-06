@@ -1,25 +1,80 @@
+.background{
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    position: cover;
+}
+
+.background img{
+    width: 110%;
+    left: -2%;
+    top: -5%;
+    position: fixed;
+    filter: blur(6px) brightness(40%);
+}
+
 .container_utente{
     display: flex;
     flex-direction: column;
+    padding: 74px 0;
 }
 
-.utenti{
+.utente{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: row;
+    background-color: rgb(15, 15, 15);
+    height: 130px;
+}
+
+.utente_foto {
+    margin: 15px 0 15px 50px ;
+    display: block;
+    width: 100px;
+    height: 100px;
+    border: 1px solid grey;
+    border-radius: 100px;
+}
+
+.utente_foto img{
+    width: 100%;
+    height: auto;
+}
+
+.utente_nome{
+    padding: 25px 25px 0 25px;
+    font-size: 80px;
+}
+.utente_nome p{
+    color: white;
+    font-family: "TT Lakes Regular", sans-serif;
 }
 
 .statistiche{
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
 }
 
 ul{
     text-decoration: none;
 }
 
-li{
+.statistiche li{
+    background: linear-gradient(145deg, #000000, #171717);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    margin: 10px;
     display: flex;
     flex-direction: column;
-    padding: 100px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+li p{
+    font-size: 32px;
+    color: white;
 }
